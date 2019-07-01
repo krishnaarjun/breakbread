@@ -1,0 +1,45 @@
+[
+  {
+    "model": "potluck.howyouheard",
+    "pk": 1,
+    "fields": { "medium": "Love Out Loud", "type": "default" }
+  },
+  {
+    "model": "potluck.howyouheard",
+    "pk": 2,
+    "fields": { "medium": "New Canaan Society", "type": "default" }
+  },
+  {
+    "model": "potluck.howyouheard",
+    "pk": 3,
+    "fields": {
+      "medium": "A Skunk Works Committee Team Member",
+      "type": "default"
+    }
+  },
+  {
+    "model": "potluck.howyouheard",
+    "pk": 4,
+    "fields": { "medium": "My church or faith organization", "type": "default" }
+  },
+  {
+    "model": "potluck.howyouheard",
+    "pk": 5,
+    "fields": { "medium": "Leadership Winston-Salem", "type": "default" }
+  },
+  {
+    "model": "potluck.howyouheard",
+    "pk": 6,
+    "fields": { "medium": "something", "type": "other" }
+  },
+  {
+    "model": "potluck.howyouheard",
+    "pk": 7,
+    "fields": { "medium": "random", "type": "other" }
+  },
+  {
+    "model": "potluck.howyouheard",
+    "pk": 8,
+    "fields": { "medium": "new one", "type": "other" }
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "model": "authentication.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$x3UeIxsgRfFH$8pzHdMUbsRMwyeoe1hiwFoBIgsFaBOITJm7L/gnhcac=",
+      "last_login": null,
+      "is_superuser": true,
+      "first_name": "admin",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2019-05-06T09:53:47.131Z",
+      "email": "admin@gmail.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$LnO7ftuoXxX7$6dgVwVMi4HA+UfL/1wASi3EqboN8HjRgBVIsOqxiXy0=",
+      "last_login": null,
+      "is_superuser": true,
+      "first_name": "random",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-05-06T09:55:11.813Z",
+      "email": "random@gmail.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$2GxbokB0PG3N$p46LP5WewrDatcYvNOwG4kUyHDWOmRDPnnCr92CXarA=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2019-05-08T11:29:11.380Z",
+      "email": "randomuser@gmail.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$cpdq3mcKLaHa$WZ7umgSva+y677anT0i4LTnxni3DRMZTA821FTupA6A=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2019-05-08T11:30:43.088Z",
+      "email": "randomsuser@gmail.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$MSbWmPSYsG0Q$RYMai3PX2dH3yoQ8GFylf+GUZfzmvP61vKseiTcx7FA=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "random",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-05-08T12:05:49.858Z",
+      "email": "ranson@gmail.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

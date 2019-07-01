@@ -1,0 +1,338 @@
+[
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "010a6c18-7edd-4d01-bce3-d0f261cb4210",
+    "fields": {
+      "name": "samson",
+      "email": "samson@gmail.com",
+      "phone": "9798796898",
+      "zipcode": 98782,
+      "ethnic_persuasion": "prefer not to say",
+      "involved": "not involved",
+      "church_affiliation": "no",
+      "availability": "thursday",
+      "hosting_at": "church",
+      "dietary_restrictions_or_allergies": "yes",
+      "comments_and_queries": "something",
+      "is_agreed": true,
+      "created_on": "2019-05-29T09:09:37.407Z",
+      "survey_meta_data": null,
+      "heard_from": [1, 6]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "01f7a488-a979-4b0a-bd3c-d46f052edd08",
+    "fields": {
+      "name": "siz",
+      "email": "siz@gmail.com",
+      "phone": "998389495",
+      "zipcode": 23522,
+      "ethnic_persuasion": "white",
+      "involved": "yes",
+      "church_affiliation": "super",
+      "availability": "thursday",
+      "hosting_at": "church",
+      "dietary_restrictions_or_allergies": "yes we have this",
+      "comments_and_queries": "nothing",
+      "is_agreed": true,
+      "created_on": "2019-05-29T08:08:15.746Z",
+      "survey_meta_data": null,
+      "heard_from": [1, 6]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "23384407-7bf9-4264-9229-1ec30d2dddd7",
+    "fields": {
+      "name": "zim",
+      "email": "zim@gmail.com",
+      "phone": "134234532",
+      "zipcode": 25432,
+      "ethnic_persuasion": "prefer not to say",
+      "involved": "ajslw3",
+      "church_affiliation": "xv34",
+      "availability": "tuesday and thursday",
+      "hosting_at": "church",
+      "dietary_restrictions_or_allergies": "on",
+      "comments_and_queries": "nothing",
+      "is_agreed": true,
+      "created_on": "2019-05-29T08:08:15.808Z",
+      "survey_meta_data": null,
+      "heard_from": [5]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "27f4a2c4-29e5-46a1-be90-afa0979f802d",
+    "fields": {
+      "name": "julie",
+      "email": "juliej@gmail.com",
+      "phone": "399327523",
+      "zipcode": 25432,
+      "ethnic_persuasion": "black or african american",
+      "involved": "ajsldfjwe",
+      "church_affiliation": "xvljseo",
+      "availability": "thursday",
+      "hosting_at": "home",
+      "dietary_restrictions_or_allergies": "allergic",
+      "comments_and_queries": "nothing",
+      "is_agreed": false,
+      "created_on": "2019-05-29T08:08:15.790Z",
+      "survey_meta_data": null,
+      "heard_from": [5]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "2b5b9b17-de11-47d7-afcc-a9b89e09320c",
+    "fields": {
+      "name": "velloria",
+      "email": "vellori@gmail.com",
+      "phone": "234234223",
+      "zipcode": 12332,
+      "ethnic_persuasion": "white",
+      "involved": "not yet",
+      "church_affiliation": "obvious",
+      "availability": "thursday",
+      "hosting_at": "home",
+      "dietary_restrictions_or_allergies": "not at all",
+      "comments_and_queries": "no comments",
+      "is_agreed": false,
+      "created_on": "2019-05-29T08:08:15.815Z",
+      "survey_meta_data": null,
+      "heard_from": [3]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "500696cc-495e-45c5-98b5-e9ac30194881",
+    "fields": {
+      "name": "rrrrrrrrrrrr",
+      "email": "rrrrr@gmail.com",
+      "phone": "9798796898",
+      "zipcode": 98782,
+      "ethnic_persuasion": "prefer not to say",
+      "involved": "not involved",
+      "church_affiliation": "no",
+      "availability": "thursday",
+      "hosting_at": "church",
+      "dietary_restrictions_or_allergies": "yes",
+      "comments_and_queries": "something",
+      "is_agreed": true,
+      "created_on": "2019-05-29T09:08:55.781Z",
+      "survey_meta_data": null,
+      "heard_from": [1, 7]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "5948b4f3-ec27-491b-a1c6-545037fc0ad9",
+    "fields": {
+      "name": "something",
+      "email": "sao@gmail.com",
+      "phone": "9898089089",
+      "zipcode": 98080,
+      "ethnic_persuasion": "white",
+      "involved": "nothing",
+      "church_affiliation": "not affliciation",
+      "availability": "tuesday",
+      "hosting_at": "home",
+      "dietary_restrictions_or_allergies": "",
+      "comments_and_queries": "",
+      "is_agreed": true,
+      "created_on": "2019-05-29T08:08:15.824Z",
+      "survey_meta_data": null,
+      "heard_from": [5]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "6b822e85-b434-4b63-8197-00cddd9d245d",
+    "fields": {
+      "name": "ljaskjdlkjsdf",
+      "email": "asdfo@gmail.com",
+      "phone": "9898089089",
+      "zipcode": 90832,
+      "ethnic_persuasion": "prefer not to say",
+      "involved": ";dklfja",
+      "church_affiliation": "jlkasjnot affliciation",
+      "availability": "thursday",
+      "hosting_at": "church",
+      "dietary_restrictions_or_allergies": "asdf",
+      "comments_and_queries": "waeragasg",
+      "is_agreed": false,
+      "created_on": "2019-05-29T08:08:15.831Z",
+      "survey_meta_data": null,
+      "heard_from": [4]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "70c4fa98-bdf5-4599-b5cc-e8cf844d7653",
+    "fields": {
+      "name": "melvin",
+      "email": "melvin@gmail.com",
+      "phone": "6239839789",
+      "zipcode": 87379,
+      "ethnic_persuasion": "black or african american",
+      "involved": "hosting",
+      "church_affiliation": "may be yes",
+      "availability": "tuesday",
+      "hosting_at": "home",
+      "dietary_restrictions_or_allergies": "lasjower",
+      "comments_and_queries": ".lksmlfjwer",
+      "is_agreed": false,
+      "created_on": "2019-05-29T08:08:15.799Z",
+      "survey_meta_data": null,
+      "heard_from": [4]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "a88c3420-8db6-42e2-b8ae-a1bb7768e09c",
+    "fields": {
+      "name": "lisa",
+      "email": "lisa@gmail.com",
+      "phone": "8798796898",
+      "zipcode": 58782,
+      "ethnic_persuasion": "prefer not to say",
+      "involved": "not involved",
+      "church_affiliation": "no",
+      "availability": "thursday",
+      "hosting_at": "church",
+      "dietary_restrictions_or_allergies": "yes",
+      "comments_and_queries": "something",
+      "is_agreed": true,
+      "created_on": "2019-05-29T09:10:22.715Z",
+      "survey_meta_data": null,
+      "heard_from": [8, 2]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "b3703758-5275-4bfc-9eb5-506f6d5a34fb",
+    "fields": {
+      "name": "sunny",
+      "email": "sunny@gmail.com",
+      "phone": "9870009909",
+      "zipcode": 90890,
+      "ethnic_persuasion": "white",
+      "involved": "asdfsadf",
+      "church_affiliation": "asdfasdf",
+      "availability": "tuesday and thursday",
+      "hosting_at": "home",
+      "dietary_restrictions_or_allergies": "asdfasdf",
+      "comments_and_queries": "random",
+      "is_agreed": true,
+      "created_on": "2019-05-29T08:08:15.839Z",
+      "survey_meta_data": null,
+      "heard_from": [2]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "ca1f87f6-8fd7-486d-82ea-3e68802b88ac",
+    "fields": {
+      "name": "rand",
+      "email": "ram@gamil.com",
+      "phone": "9809080",
+      "zipcode": 90098,
+      "ethnic_persuasion": "white",
+      "involved": "asdfa",
+      "church_affiliation": "sdgasdgas",
+      "availability": "thursday",
+      "hosting_at": "church",
+      "dietary_restrictions_or_allergies": "asdfasdf",
+      "comments_and_queries": "wewbadf",
+      "is_agreed": true,
+      "created_on": "2019-05-29T08:08:15.772Z",
+      "survey_meta_data": null,
+      "heard_from": [3]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "df8f66dd-3d14-4689-b08c-b4752bc8fea7",
+    "fields": {
+      "name": "rowie",
+      "email": "ik@gmail.com",
+      "phone": "98090809",
+      "zipcode": 90098,
+      "ethnic_persuasion": "prefer not to say",
+      "involved": "asdfa",
+      "church_affiliation": "sdgasdgas",
+      "availability": "tuesday and thursday",
+      "hosting_at": "church",
+      "dietary_restrictions_or_allergies": "asdfasdf",
+      "comments_and_queries": "wewbadf",
+      "is_agreed": true,
+      "created_on": "2019-05-29T08:08:15.781Z",
+      "survey_meta_data": null,
+      "heard_from": [2]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "e41ccd1e-edf4-4c4e-b9ff-43d0bd026326",
+    "fields": {
+      "name": "siz",
+      "email": "siz@gmail.com",
+      "phone": "998389495",
+      "zipcode": 23522,
+      "ethnic_persuasion": "white",
+      "involved": "yes",
+      "church_affiliation": "super",
+      "availability": "thursday",
+      "hosting_at": "church",
+      "dietary_restrictions_or_allergies": "yes we have this",
+      "comments_and_queries": "nothing",
+      "is_agreed": true,
+      "created_on": "2019-05-29T08:08:15.746Z",
+      "survey_meta_data": null,
+      "heard_from": [1, 6]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "e46f558b-d94e-41e7-bb70-b9ab5689cbe8",
+    "fields": {
+      "name": "saiteja",
+      "email": "saiteja@gmail.com",
+      "phone": "8008007072",
+      "zipcode": 89809,
+      "ethnic_persuasion": "black or african american",
+      "involved": "something",
+      "church_affiliation": "Yes",
+      "availability": "tuesday",
+      "hosting_at": "home",
+      "dietary_restrictions_or_allergies": "yes",
+      "comments_and_queries": "something",
+      "is_agreed": true,
+      "created_on": "2019-05-29T08:08:15.760Z",
+      "survey_meta_data": null,
+      "heard_from": [2]
+    }
+  },
+  {
+    "model": "potluck.potlucksurvey",
+    "pk": "ead8670e-e8db-451a-91bd-cb090f33640d",
+    "fields": {
+      "name": "runner",
+      "email": "runner@gmail.com",
+      "phone": "9890890885",
+      "zipcode": 98976,
+      "ethnic_persuasion": "white",
+      "involved": "2",
+      "church_affiliation": "asdf",
+      "availability": "tuesday and thursday",
+      "hosting_at": "church",
+      "dietary_restrictions_or_allergies": "asdfasdf",
+      "comments_and_queries": "asdfasdf",
+      "is_agreed": true,
+      "created_on": "2019-05-29T08:25:07.255Z",
+      "survey_meta_data": null,
+      "heard_from": [1, 2, 3, 4, 5]
+    }
+  }
+]

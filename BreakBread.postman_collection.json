@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "36a99a41-505d-482b-ae41-3e572cf01f49",
+		"name": "BreakBread",
+		"description": "This collection consists of requests pertaining to breakbread project.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Token Generation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c64b2e42-849a-4fe1-a9e7-e6498e7a7fc0",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"token_jwt = \"JWT \" + jsonData.token;",
+									"",
+									"postman.setEnvironmentVariable(\"token\", token_jwt);",
+									"",
+									"tests[\"token generated successfully for the user\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"{{email}}\",\n\t\"password\":\"{{password}}\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api-token-auth/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api-token-auth",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This module consists of authentication related requests"
+		},
+		{
+			"name": "Potlucksurvey",
+			"item": [
+				{
+					"name": "GET - Retrieve list of potluck surverys",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d0e658ac-81a3-45fc-9bc4-d4aee8b11e13",
+								"exec": [
+									"tests[\"got potluck survey list successfully\"] = responseCode.code === 200;",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/potluck/surveys/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"potluck",
+								"surveys",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST- Post potluck survey",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "17aba8a2-90d1-44d1-8900-60e23741dda2",
+								"exec": [
+									"tests[\"Posted potluck survey successfully\"] = responseCode.code === 201;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"name\": \"grump\",\n            \"email\": \"grump@gmail.com\",\n            \"phone\": \"9798796898\",\n            \"zipcode\": 98782,\n            \"ethnic_persuasion\": \"prefer not to say\",\n            \"involved\": \"not involved\",\n            \"church_affiliation\": \"no\",\n            \"availability\": \"thursday\",\n            \"hosting_at\": \"church\",\n            \"dietary_restrictions_or_allergies\": \"yes\",\n            \"comments_and_queries\": \"something\",\n            \"is_agreed\": true,\n            \"heard_from\": 1\n        }"
+						},
+						"url": {
+							"raw": "{{url}}/api/potluck/surveys/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"potluck",
+								"surveys",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST- Post potluck survey Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "40a8f501-3f0a-4b7e-9ed1-8e9470d7fc91",
+								"exec": [
+									"tests[\"updated survey successfully\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"newputer\",\n    \"email\": \"newputer@gmail.com\",\n    \"phone\": \"9768677072\",\n    \"zipcode\": 80980,\n    \"ethnic_persuasion\": \"white\",\n    \"involved\": \"something\",\n    \"church_affiliation\": \"Yes\",\n    \"availability\": \"tuesday\",\n    \"hosting_at\": \"home\",\n    \"dietary_restrictions_or_allergies\": \"yes\",\n    \"comments_and_queries\": \"something\",\n    \"is_agreed\": true,\n    \"heard_from\": 1\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/potluck/surveys/14/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"potluck",
+								"surveys",
+								"14",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Requests pertaining to potluck api endpoints"
+		},
+		{
+			"name": "HeardFromSource",
+			"item": [
+				{
+					"name": "Get - List of  default heard from sources",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "64892817-60ea-4e78-94b0-6f103813bb16",
+								"exec": [
+									"tests[\"got heardfrom list successfully\"] = responseCode.code === 200;",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/potluck/heardfrom/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"potluck",
+								"heardfrom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - insert a heard from source",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d1d5362b-7079-4b76-b784-44e4e25d775b",
+								"exec": [
+									"tests[\"insertted heardfrom record successfully\"] = responseCode.code === 200;",
+									"tests[\"Unsupported media type\"] = responseCode.code === 415;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"medium\": \"saw on tv\",\n    \"type\": \"other\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/potluck/heardfrom/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"potluck",
+								"heardfrom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - update heard from if authenticated.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "60c10abd-e22f-414e-be51-604c1efa6cbb",
+								"exec": [
+									"tests[\"insertted heardfrom record successfully\"] = responseCode.code === 200;",
+									"tests[\"Unsupported media type\"] = responseCode.code === 415;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"medium\": \"told by friend\",\n    \"type\": \"other\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/potluck/heardfrom/6/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"potluck",
+								"heardfrom",
+								"6",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "groups",
+			"item": [
+				{
+					"name": "GET - get randomized users group",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9ec3c621-b881-45c9-92ab-674c30ccc075",
+								"exec": [
+									"tests[\"got rantomized survey groups\"] = responseCode.code === 200;",
+									"tests[\"Unsupported media type\"] = responseCode.code === 415;",
+									"tests[\"Authentication credentials were not provided.\"] = responseCode.code === 401;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/potluck/get_groups/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"potluck",
+								"get_groups",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

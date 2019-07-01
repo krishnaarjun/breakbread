@@ -1,0 +1,15 @@
+<h1>
+  Hi {{ user_info.name }}! Your potluck
+  <div>{{ group_info.name }}</div>
+  has been scheduled on {{ group_info.hosting_on }}
+</h1>
+<div>To select breakbread menu <a href="{{ menu_link }}">click here</a></div>
+{% if guests %}
+<div>Here is the list of guests</div>
+{% for guest in guests %}
+<div>
+  <div>{{ guest.name }}</div>
+  <div>{{ guest.email }}</div>
+  <div>{{ guest.phone }}</div>
+</div>
+{% endfor %} {% endif %}

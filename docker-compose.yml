@@ -1,0 +1,71 @@
+version: "3.7"
+services:
+  db:
+    image: postgres:11.2
+    environment:
+      POSTGRES_DB: ${DB_NAME:-breakbread}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+    ports:
+      - 5432:5432
+  broker:
+    image: rabbitmq:3
+    ports:
+      - 5672:5672
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER:-rabbit_user}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS:-rabbit@open}
+  worker:
+    build:
+      context: ./breakbread-backend
+      dockerfile: Dockerfile
+    environment:
+      DB_NAME: ${DB_NAME:-breakbread}
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-postgres}
+      DB_HOST: db
+      DB_PORT: 5432
+      EMAIL_HOST: ${EMAIL_HOST:-smtp.gmail.com}
+      EMAIL_HOST_USER: ${EMAIL_HOST_USER}
+      EMAIL_HOST_PASSWORD: ${EMAIL_HOST_PASSWORD}
+      CELERY_BROKER_URL: "amqp://${RABBITMQ_DEFAULT_USER:-rabbit_user}:${RABBITMQ_DEFAULT_PASS:-rabbit@open}@broker"
+    command: ["celery", "-A", "breakbread", "worker", "-l", "info"]
+    volumes:
+      - ./breakbread-backend:/code
+    depends_on:
+      - broker
+  backend:
+    build:
+      context: ./breakbread-backend
+      dockerfile: Dockerfile
+    environment:
+      DB_NAME: ${DB_NAME:-breakbread}
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-postgres}
+      DB_HOST: db
+      DB_PORT: 5432
+      EMAIL_HOST: ${EMAIL_HOST}
+      EMAIL_HOST_USER: ${EMAIL_HOST_USER}
+      EMAIL_HOST_PASSWORD: ${EMAIL_HOST_PASSWORD}
+      CELERY_BROKER_URL: "amqp://${RABBITMQ_DEFAULT_USER:-rabbit_user}:${RABBITMQ_DEFAULT_PASS:-rabbit@open}@broker"
+    command: bash -c "chmod u+x /code/entrypoint.sh && /code/entrypoint.sh"
+    volumes:
+      - ./breakbread-backend:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - worker
+  frontend:
+    build:
+      context: ./breakbread-frontend
+      dockerfile: Dockerfile
+    command: bash -c  "npm rebuild node-sass && npm run serve --fix"
+    env_file:
+      - ./breakbread-frontend/.env.development
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
+    volumes:
+      - ./breakbread-frontend/src:/code/src
